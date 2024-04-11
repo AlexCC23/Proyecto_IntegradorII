@@ -90,9 +90,13 @@ WSGI_APPLICATION = 'hospital.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "Hospital",
+        "USER": "postgres",
+        "PASSWORD": "admin",
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
     }
 }
 
