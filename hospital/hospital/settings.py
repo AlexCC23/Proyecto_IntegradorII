@@ -39,6 +39,7 @@ BASE_APPS = [
 ]
 LOCAL_APPS = [
     'ReceteMedica',
+    'RecetaMedicina'
 ]
 
 THIRD_APPS = [
