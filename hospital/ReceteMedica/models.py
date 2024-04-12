@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+class Receta(models.Model):
+    dni_Paciente=models.CharField(max_length=10)
+    nombre_Medico=models.CharField(max_length=150)
+    
