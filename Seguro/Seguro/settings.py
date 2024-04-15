@@ -39,7 +39,9 @@ BASE_APPS = [
     'django.contrib.staticfiles',
 ]
 LOCAL_APPS = [
-    'Asegurado'
+    'Asegurado',
+    'Administrador',
+    'Conductor',
 ]
 
 THIRD_APPS = [
