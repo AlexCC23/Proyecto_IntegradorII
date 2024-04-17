@@ -81,7 +81,7 @@ TEMPLATES = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    
+    "http://localhost:5173",
     "http://localhost:8000",
     "http://127.0.0.1:8000",
 ]   
@@ -97,7 +97,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "Seguro",
         "USER": "postgres",
-        "PASSWORD": "Gordy25@",
+        "PASSWORD": "admin",
         "HOST": "127.0.0.1",
         "PORT": "5432",
     }
