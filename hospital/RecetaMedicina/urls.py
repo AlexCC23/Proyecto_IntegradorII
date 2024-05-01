@@ -3,7 +3,7 @@ from rest_framework import routers
 from RecetaMedicina import views
 
 router = routers.DefaultRouter()
-router.register(r'RecetaMedicina',views.RecetaMedicinaView,'RecetaMedicina')
+router.register(r'',views.RecetaMedicinaView,'RecetaMedicina')
 
 urlpatterns = [
     path('RecetaMedicina/', include(router.urls)) 
