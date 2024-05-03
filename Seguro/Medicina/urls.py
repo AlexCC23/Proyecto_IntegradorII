@@ -1,10 +1,10 @@
 from django.urls import path, include
 from rest_framework import routers
-from Conductor import views
+from Medicina import views
 
 router = routers.DefaultRouter()
-router.register(r'',views.ConductorView)
+router.register(r'',views.MedicinaView)
 
 urlpatterns = [
-    path('Conductor/', include(router.urls))
+    path('Medicina/', include(router.urls))
 ]
