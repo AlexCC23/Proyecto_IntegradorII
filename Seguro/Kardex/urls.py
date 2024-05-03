@@ -1,10 +1,10 @@
 from django.urls import path, include
 from rest_framework import routers
-from Conductor import views
+from Kardex import views
 
 router = routers.DefaultRouter()
-router.register(r'',views.ConductorView)
+router.register(r'',views.KardexView)
 
 urlpatterns = [
-    path('Conductor/', include(router.urls))
+    path('Kardex/', include(router.urls))
 ]

@@ -39,6 +39,11 @@ BASE_APPS = [
     'django.contrib.staticfiles',
 ]
 LOCAL_APPS = [
+    'Kardex',
+    'Receta',
+    'Receta_Medicina',
+    'Pedido',
+    'Medicina',
     'Asegurado',
     'Administrador',
     'Conductor',
@@ -81,7 +86,9 @@ TEMPLATES = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
+
     "http://localhost:5173",
+
     "http://localhost:8000",
     "http://127.0.0.1:8000",
 ]   
@@ -97,7 +104,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "Seguro",
         "USER": "postgres",
-        "PASSWORD": "admin",
+        "PASSWORD": "Gordy25@",
         "HOST": "127.0.0.1",
         "PORT": "5432",
     }

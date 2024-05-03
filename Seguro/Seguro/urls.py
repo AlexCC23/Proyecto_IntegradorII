@@ -22,4 +22,9 @@ urlpatterns = [
     path('Seguro/', include('Asegurado.urls')),
     path('Seguro/', include('Administrador.urls')),
     path('Seguro/', include('Conductor.urls')),
+    path('Seguro/', include('Kardex.urls')),
+    path('Seguro/', include('Pedido.urls')),
+    path('Seguro/', include('Receta.urls')),
+    path('Seguro/', include('Medicina.urls')),
+    path('Seguro/', include('Receta_Medicina.urls')),
 ]

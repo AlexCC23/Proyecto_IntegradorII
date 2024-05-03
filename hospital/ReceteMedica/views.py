@@ -12,3 +12,13 @@ class RecetaView(viewsets.ModelViewSet):
     serializer_class=RecetaSerializers
     queryset=Receta.objects.all() #este sentencia es oara trear todos los datos de los campos indicados en serializers
      #este es como el json
+     
+     
+class RecetaForFechaView(viewsets.ViewSet):
+    def list(self, request, fec):
+        queryset = Receta.objects.filter(fecha=fec).filter(hora__lte='12:00:00')
+        serializer = RecetaSerializers(queryset, many=True)
+        return Response(serializer.data)
+    
+    
+    
