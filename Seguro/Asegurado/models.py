@@ -10,4 +10,6 @@ class Asegurado(models.Model):
     direccion = models.CharField(max_length=100,null=True)
     ubicacion = models.CharField(max_length=100)
     TipoSeguro= models.CharField(max_length=50, default="")
+    Latitud=models.CharField(max_length=200, null=True)
+    Longitud=models.CharField(max_length=200, null=True)
     contraseña = models.CharField(max_length=100,null=True)
