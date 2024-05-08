@@ -15,8 +15,8 @@ class RecetaView(viewsets.ModelViewSet):
      
      
 class RecetaForFechaView(viewsets.ViewSet):
-    def list(self, request, fec,hor):
-        queryset = Receta.objects.filter(fecha=fec).filter(hora__lte=hor)
+    def list(self, request, fec,horIncio,horaFin):
+        queryset = Receta.objects.filter(fecha=fec,hora__lte=horaFin,hora__gte=horIncio)
         serializer = RecetaSerializers(queryset, many=True)
         return Response(serializer.data)
     

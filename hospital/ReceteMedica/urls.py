@@ -9,7 +9,7 @@ router.register(r'',views.RecetaView,'RecetaMedica')
 
 urlpatterns = [
     path('RecetaMedica/', include(router.urls)), # crear la url para cada metodo
-    path('RecetaMedicaFecha/<fec>/<hor>',views.RecetaForFechaView.as_view({'get':'list'})),
+    path('RecetaMedicaFecha/<fec>/<horIncio>/<horaFin>',views.RecetaForFechaView.as_view({'get':'list'})),
 ]
 
 
