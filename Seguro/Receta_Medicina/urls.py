@@ -6,5 +6,6 @@ router = routers.DefaultRouter()
 router.register(r'',views.Receta_MedicinaView)
 
 urlpatterns = [
-    path('RecetaMedicina/', include(router.urls))
+    path('RecetaMedicina/', include(router.urls)),
+    path('RecetaIDMedicina/<id_rec>',views.RecetaIDMedicinaView.as_view({'get':'list'})),
 ]
