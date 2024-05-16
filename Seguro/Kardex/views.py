@@ -12,6 +12,6 @@ class KardexView(viewsets.ModelViewSet):
     
 class KardexMedicinaView(viewsets.ViewSet):
     def list(self, request,med):
-        queryset = Kardex.objects.filter(id_medicina=med)
+        queryset = Kardex.objects.filter(id_medicina=med,saldo__gt = 0 ).order_by("fec_venci")
         serializer = KardexSerializers(queryset, many=True)
         return Response(serializer.data)
