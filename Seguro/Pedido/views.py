@@ -17,3 +17,9 @@ class PedidoForPrioridadView(viewsets.ViewSet):
         serializer = PedidoSerializers(queryset, many=True)
         return Response(serializer.data)
     
+class PedidoForConductor(viewsets.ViewSet):
+    def list(self, request,prio,fec,cond):
+        queryset = Pedido.objects.filter(fecha=fec,prioridad=prio,id_conductor=cond)
+        serializer = PedidoSerializers(queryset, many=True)
+        return Response(serializer.data)
+    
