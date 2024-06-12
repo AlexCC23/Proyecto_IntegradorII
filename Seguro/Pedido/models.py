@@ -10,4 +10,6 @@ class Pedido (models.Model):
     estatus=models.CharField(max_length=20)
     prioridad= models.CharField(max_length=20)
     fecha=models.DateField()
+    firma_digital = models.TextField(null=True)
+    dni_img = models.TextField(null=True)
 

@@ -7,5 +7,6 @@ router.register(r'',views.PedidoView)
 
 urlpatterns = [
     path('Pedido/', include(router.urls)),
-    path('PedidoPrioridad/<fec>/<prio>/<cond>',views.PedidoForPrioridadView.as_view({'get':'list'})),
+    path('PedidoPrioridad/<fec>/<prio>/<cond>/<sta>',views.PedidoForPrioridadView.as_view({'get':'list'})),
+    path('PedidoConductor/<fec>/<prio>/<cond>',views.PedidoForConductor.as_view({'get':'list'})),
 ]
