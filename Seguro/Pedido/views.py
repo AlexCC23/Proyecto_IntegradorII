@@ -23,3 +23,8 @@ class PedidoForConductor(viewsets.ViewSet):
         serializer = PedidoSerializers(queryset, many=True)
         return Response(serializer.data)
     
+class PedidoForReceta(viewsets.ViewSet):
+    def list(self, request,est,rec):
+        queryset = Pedido.objects.filter(estatus=est,id_receta=rec)
+        serializer = PedidoSerializers(queryset, many=True)
+        return Response(serializer.data)  

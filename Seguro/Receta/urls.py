@@ -8,4 +8,5 @@ router.register(r'',views.RecetaView)
 urlpatterns = [
     path('Receta/', include(router.urls)),
     path('RecetaIDHospital/<id>',views.RecetaForIDView.as_view({'get':'list'})),
+    path('RecetaPaciente/<dni>',views.RecetaForPaciente.as_view({'get':'list'})),
 ]

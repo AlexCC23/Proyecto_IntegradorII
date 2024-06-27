@@ -15,3 +15,10 @@ class RecetaForIDView(viewsets.ViewSet):
         queryset = Receta.objects.filter(id_receta=id)
         serializer = RecetaSerializers(queryset, many=True)
         return Response(serializer.data)
+
+class RecetaForPaciente(viewsets.ViewSet):
+    def list(self, request, dni):
+        queryset = Receta.objects.filter(dni_asegurado=dni)
+        serializer = RecetaSerializers(queryset, many=True)
+        return Response(serializer.data)
+    
