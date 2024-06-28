@@ -9,4 +9,5 @@ urlpatterns = [
     path('Pedido/', include(router.urls)),
     path('PedidoPrioridad/<fec>/<prio>/<cond>/<sta>',views.PedidoForPrioridadView.as_view({'get':'list'})),
     path('PedidoConductor/<fec>/<prio>/<cond>',views.PedidoForConductor.as_view({'get':'list'})),
+    path('PedidoReceta/<est>/<rec>',views.PedidoForReceta.as_view({'get':'list'})),
 ]
