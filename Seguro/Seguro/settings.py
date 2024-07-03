@@ -47,6 +47,7 @@ LOCAL_APPS = [
     'Asegurado',
     'Administrador',
     'Conductor',
+    'Guia',
 ]
 
 THIRD_APPS = [
