@@ -19,6 +19,9 @@ from .serializers import EmailSerializer
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
 
+from .serializers import SMSSerializer
+import vonage
+
 
 class PedidoView(viewsets.ModelViewSet):
     serializer_class=PedidoSerializers
@@ -125,4 +128,28 @@ class SendEmailView(APIView):
             
             return Response({'message': response}, status=status.HTTP_200_OK)
        
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    
+class SendSMS(APIView):
+    def post(self, request, *args, **kwargs):
+        serializer = SMSSerializer(data=request.data)
+        if serializer.is_valid():
+            to = serializer.validated_data['to']
+            text = serializer.validated_data['text']
+
+            # Configura el cliente de Vonage
+            client = vonage.Client(key="c376f0e5", secret="i90HLuGP2hq6cetR")
+            sms = vonage.Sms(client)
+
+            responseData = sms.send_message({
+                "from": "HeltExpes",
+                "to": to,
+                "text": text,
+            })
+
+            if responseData["messages"][0]["status"] == "0":
+                return Response({"message": "SMS enviado exitosamente"}, status=status.HTTP_200_OK)
+            else:
+                return Response({"error": "Error al enviar SMS"}, status=status.HTTP_400_BAD_REQUEST)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

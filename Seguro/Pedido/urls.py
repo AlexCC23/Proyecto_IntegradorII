@@ -12,4 +12,5 @@ urlpatterns = [
     path('PedidoReceta/<est>/<rec>',views.PedidoForReceta.as_view({'get':'list'})),
     path('add-password/', views.AddPasswordToPdf.as_view(), name='add-password'),
     path('send-email/', views.SendEmailView.as_view(), name='send-email'),
+    path('send-sms/', views.SendSMS.as_view(), name='send_sms'),
 ]

@@ -48,6 +48,7 @@ LOCAL_APPS = [
     'Administrador',
     'Conductor',
     'Guia',
+    'Puntuacion'
 ]
 
 THIRD_APPS = [
@@ -110,6 +111,17 @@ DATABASES = {
         "PORT": "5432",
     }
 }
+
+"""DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "postgres",
+        "USER": "postgres.kewwebxecpeqgvactoyb",
+        "PASSWORD": "Jxdflores2512@",
+        "HOST": "aws-0-us-west-1.pooler.supabase.com",
+        "PORT": "6543",
+    }
+}"""
 
 
 
