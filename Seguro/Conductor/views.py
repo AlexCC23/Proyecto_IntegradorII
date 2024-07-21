@@ -10,3 +10,8 @@ class ConductorView(viewsets.ModelViewSet):
     serializer_class=ConductorSerializers
     queryset=Conductor.objects.all() 
 
+class ConductorDireccionView(viewsets.ViewSet):
+    def list(self, request,direc):
+        queryset = Conductor.objects.filter(direccion =direc )
+        serializer = ConductorSerializers(queryset, many=True)
+        return Response(serializer.data)

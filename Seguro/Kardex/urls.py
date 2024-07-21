@@ -6,5 +6,6 @@ router = routers.DefaultRouter()
 router.register(r'',views.KardexView)
 
 urlpatterns = [
-    path('Kardex/', include(router.urls))
+    path('Kardex/', include(router.urls)),
+    path('KardexMedicina/<med>/',views.KardexMedicinaView.as_view({'get':'list'})), 
 ]

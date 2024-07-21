@@ -1,0 +1,6 @@
+projectKey=IntegradorBack
+serverUrl=http://localhost:9000
+serverVersion=10.6.0.92116
+dashboardUrl=http://localhost:9000/dashboard?id=IntegradorBack
+ceTaskId=81c90a5e-da23-4cc7-b529-65e38b36fcdb
+ceTaskUrl=http://localhost:9000/api/ce/task?id=81c90a5e-da23-4cc7-b529-65e38b36fcdb
